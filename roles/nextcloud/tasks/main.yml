@@ -6,6 +6,7 @@
     remote_src: True
     owner: apache
     group: apache
+  creates: /var/www/html/nextcloud
 
 - name: Create Data Directory
   file:

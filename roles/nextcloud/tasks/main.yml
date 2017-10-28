@@ -27,9 +27,3 @@
     priv: nextcloud.*:ALL
     host: localhost
     state: present
-
-- name: Start Web Server
-  service:
-    name: httpd
-    state: restarted
-    enabled: yes

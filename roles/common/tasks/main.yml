@@ -3,6 +3,13 @@
   yum:
     name: epel-release
     state: present
+  when: ansible_distribution == "CentOS"
+  
+ - name: install EPEL repo (RedHat)
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    state: present
+  when: ansible_distribution == "RedHat"
 
 - name: install tools
   yum:
